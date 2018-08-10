@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Shadows+Into+Light" rel="stylesheet">
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="static/themes/myfeedstyle.css">
+  </head>
+  <header>
+  <body>
+    <div class='heady'>
+      <h1>Welcome to MEX: The best recipe sharing website</h1>
+      <a href="/myhome"><button class="navlinks">Home</button></a>
+      <a href="/aboutus"><button class="navlinks">About Us</button></a>
+      <a href="/post"><button class="navlinks">Post</button></a>
+      <a href="/myprofile"><button class="navlinks">Profile</button></a>
+      <a href="/myfeed"><button class="navlinks">Feed</button></a>
+      <a href="{{logout_url}}"><button class="navlinks">Sign Out</button></a>
+      </div>
+    </div>
+    <div class='recipes'>
+      {% set count2=0%}
+      {% for recipe in recipes %}
+      <div>
+      <article class='post1'>
+        <h2>{{recipe.name}} by {{owner[count2].fullname}}</h2>
+        <article  id='removebot' class='subposts'>
+          <h2>Description</h2>
+          <p> {{recipe.description}}</p>
+        </article>
+        <article id='removebot' class='subposts'>
+          <h2>Ingredients</h2>
+          <p>{{recipe.ingredients}}</p>
+        </article>
+        <article id='removebot' class='subposts'>
+          <h2>Instructions</h2>
+          <p>{{recipe.instructions}}</p>
+        </article>
+
+        <article id='removebot' class='subposts' id='profile_picture'>
+          <br>
+          <div><img src='/img?img_id={{urls[count2]}}'></div>
+          <br>
+        </article>
+      </div>
+      {% set count2=count2+1%}
+      {% endfor %}
+
+    </div>
+  </header>
+
+
+
+  </body>
+</html>

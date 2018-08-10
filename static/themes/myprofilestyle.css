@@ -1,0 +1,138 @@
+.heady {
+  background-color: rgba(255,25,25,.89999);
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+  border: 2px rgba(2,2,2,.5) solid;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size: cover;
+  background-attachment: fixed;
+  /* font-family: 'Helvetica', cursive; */
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 100px;
+
+}
+
+html {
+  background: url(food.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.heady .navlinks {
+/* Main axis is horizontal */
+  justify-content: flex-end;
+  font-size: 30px;
+}
+
+.profileHeader {
+  background-color: rgba(255,224,102,.89999);
+  margin: 0px 150px 0px 150px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  border-radius: 15px;
+
+}
+
+#profile_picture {
+
+}
+
+.picetbio {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 0 auto;
+  height: 200px;
+
+}
+
+.picetbio * {
+
+}
+
+.pic {
+  width: 200px;
+  height: 175px;
+  margin:
+}
+
+.name {
+  width: 200px;
+  height: 175px;
+  text-indent: 25px;
+
+}
+
+.bio {
+  width: 700px;
+  height: 175px;
+  overflow: hidden;
+  text-indent: 25px;
+}
+
+.recipes *
+}
+
+.recipes {
+  width: 0 auto;
+  margin-left: 150px;
+  margin-right: 150px;
+
+}
+
+.post1 {
+  background-color: rgba(255,224,102,.89999);
+  margin: 10px 300px 10px 300px;
+  border: 1px black solid;
+  text-indent: 25px;
+  border-radius: 15px;
+}
+
+.subposts {
+  background-color: rgba(255,224,102,.1);
+  border: 2px black solid;
+  border-left: 0px;
+  border-right: 0px;
+  text-indent: 25px;
+}
+
+#removebot {
+  border-bottom: 0px;
+}
+
+.navlinks {
+  background-color: rgba(255,25,25,.89999);
+  font-family: 'Shadows Into Light', cursive;
+  border: rgba(2,2,2,.8) solid;
+  color: rgb(2,2,2)
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 22px;
+}
+
+.navlinks:hover {opacity:1}

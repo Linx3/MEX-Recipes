@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MEX</title>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" href="/static/themes/design.css">
+
+  <body>
+
+    <div class='heady'>
+      <h1>Welcome to MEX</h1>
+      <h2 class='spacer'> The best recipe sharing website</h2>
+      <a href="/aboutus"><button id="about_us_link" class='corsage'>About Us</button></a>
+
+    </div>
+
+    <div class='container'>
+      <img class='slides' src='/static/themes/food.jpg'>
+      <img class='slides' src='/static/themes/food4.jpg'>
+      <img class='slides' src='/static/themes/food5.jpg'>
+      <div class='loginbox'>
+        {% if user %}
+          <br>
+          <a href="{{logout_url}}"><button class='buttonete'>Sign Out
+          </button>
+          </a>
+          {% else %}
+          <br>
+          <a href="{{login_url}}"><button class='buttonete'>Sign In
+
+          </button>
+          </a>
+          {% endif %}
+      </div>
+    </div>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <script src="static/scripts/recipe.js"></script>
+
+
+  </body>
+</html>

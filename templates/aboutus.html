@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Shadows+Into+Light" rel="stylesheet">
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="static/themes/aboutus.css">
+  </head>
+
+    <header>
+    <div class='heady'>
+      <h1>Welcome to MEX</h1>
+      <h2>The best recipe sharing website</h2>
+    <!--  <h2 class='spacer'> The best recipe sharing website</h2> -->
+    {% if user %}
+    {% if profile %}
+    <a href="/myhome"><button class="navlinks">Home</button></a>
+    <a href="/aboutus"><button class="navlinks">About Us</button></a>
+    <a href="/post"><button class="navlinks">Post</button></a>
+    <a href="/myprofile"><button class="navlinks">Profile</button></a>
+    <a href="/myfeed"><button class="navlinks">Feed</button></a>
+    <a href="{{logout_url}}"><button class="navlinks">Sign Out</button></a>
+    {% else %}
+    <a href="/myhome"><button class="navlinks">Home</button></a>
+    <a href="/aboutus"><button class="navlinks">About Us</button></a>
+    <a href="/post"><button class='navlinks'>Create Profile</button></a>
+    <a href="{{logout_url}}"><button class="navlinks">Sign Out</button></a>
+    {% endif %}
+    {% else %}
+      <a href="/"><button class='navlinks'>Back to Homepage</button></a>
+    {% endif %}
+      </div>
+    </header>
+    <body>
+    <div class="maincontent">
+      <div class="maintext">
+      <h3>Making cooking easier and more enjoyable.<br>
+      One user at a time.</h3>
+        <p class="content">We know how tricky it is to manage all of your recipes.
+          That why we're here to do the work for you.
+          With MEX, recipe organization is right at your fingertips.
+          Just enter your recipes and we'll keep track of them for you
+          on your personal profile.
+          By posting your recipes on MEX, you can also share them with all of your friends!</p>
+        <h4>It's cooking with recipes in its most relaxed form. <br>
+          Join us to start today.</h4>
+      </div>
+    </div>
+
+
+    {% for link in urls%}
+    <div><img src="/img?img_id={{link}}"></img></div>
+    {% endfor%}
+
+
+
+
+  </body>
+</html>

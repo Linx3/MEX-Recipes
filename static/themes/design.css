@@ -1,0 +1,75 @@
+.heady {
+  background-color: rgba(255,25,25,.89999);
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px rgba(2,2,2,.5) solid;
+}
+
+#about_us_link {
+  font-size: 30px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+
+}
+
+.loginbox {
+  position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255,25,25,.89999);
+    border-radius: 100px;
+    border: 2px rgba(2,2,2,.5) solid;
+
+
+}
+
+.buttonete {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #ffdead;
+}
+
+
+.slides {
+  margin: 0 auto;
+  width: 1450px;
+  height: 750px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+}
+
+.corsage {
+  background-color: rgba(255,25,25,.89999);
+  font-family: 'Shadows Into Light', cursive;
+  border: rgba(2,2,2,.5) solid;
+  color: rgb(2,2,2)
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 22px;
+}
+.corsage:hover {opacity: 1}

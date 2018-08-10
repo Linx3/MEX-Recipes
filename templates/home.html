@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Shadows+Into+Light" rel="stylesheet">
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="static/themes/homestyle.css">
+  </head>
+
+    <header>
+    <div class='heady'>
+      <h1>Welcome to MEX</h1>
+      <h2>The best recipe sharing website</h2>
+
+    <!--  <h2 class='spacer'> The best recipe sharing website</h2> -->
+    {% if user %}
+    <a href="/myhome"><button class="navlinks">Home</button></a>
+    <a href="/aboutus"><button class="navlinks">About Us</button></a>
+    <a href="/post"><button class="navlinks">Post</button></a>
+    <a href="/createprofile"><button class="navlinks">Create Profile</button></a>
+    <a href="/myfeed"><button class="navlinks">Feed</button></a>
+    <a href="{{logout_url}}"><button class="navlinks">Sign Out</button></a>
+
+    {% else %}
+      <a class="navlinks" href="/">Back to Homepage</a>
+    {% endif %}
+      </div>
+    </header>
+    <body>
+    <div class="maincontent">
+      <div class="maintext">
+      <h3>Welcome! <br>
+        Get started with the links above.</h3>
+
+
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Shadows+Into+Light" rel="stylesheet">
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="static/themes/myprofilestyle.css">
+  </head>
+    <body>
+    <div class='heady'>
+      <h1>Welcome to MEX: The best recipe sharing website</h1>
+
+      <a href="/myhome"><button class="navlinks">Home</button></a>
+      <a href="/aboutus"><button class="navlinks">About Us</button></a>
+      <a href="/post"><button class="navlinks">Post</button></a>
+      <a href="/myprofile"><button class="navlinks">Profile</button></a>
+      <a href="/myfeed"><button class="navlinks">Feed</button></a>
+      <a href="{{logout_url}}"><button class="navlinks">Sign Out</button></a>
+    </div>
+
+    <br>
+    <div class='profileHeader'>
+
+      <article class='picetbio'>
+        <br><br><br>
+        <img class= 'pic' src="/img?img_id={{pfp}}"></img>
+
+        <h2 class='name'>{{fullname}}</h2>
+        <p class='bio'>
+          {{bio}}
+        <!--  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu ex in diam tempus molestie eu ac arcu. Morbi eget lorem erat. Maecenas vitae imperdiet ante. Quisque lobortis ac elit et ultricies. Curabitur vehicula dictum turpis, eget feugiat enim ornare sed. Etiam ullamcorper turpis lacus, vitae venenatis diam placerat vitae. Nunc vel dignissim felis. Aliquam pulvinar mauris urna, sit amet gravida leo vulputate in. Quisque aliquam, justo ut aliquet convallis, odio erat lacinia augue, eget iaculis nunc urna et purus. Vestibulum accumsan ornare odio, ac efficitur magna laoreet in. Proin dapibus, leo vitae aliquam accumsan, quam nulla fermentum lacus, sed malesuada nisi purus vitae elit. Vivamus ut hendrerit neque. Donec quis urna ac mi vulputate venenatis.
+        --> </p>
+    </article>
+      </div>
+      <div class='recipes'>
+        {% set count=0%}
+        {% for recipe in recipes %}
+        <div>
+        <article class='post1'>
+          <h2>{{recipe.name}} by {{fullname}}
+            </h2>
+          <article id='removebot' class='subposts'>
+            <h2>Description</h2>
+            <p>{{recipe.description}}</p>
+          </article>
+          <article id='removebot' class='subposts'>
+            <h2>Ingredients</h2>
+            <p>{{recipe.ingredients}}</p>
+          </article>
+          <article id='removebot' class='subposts'>
+            <h2>Instructions</h2>
+            <p>{{recipe.instructions}}</p>
+          </article>
+          <article id='removebot' class='subposts' id='profile_picture'>
+            <br>
+            <div><img src="/img?img_id={{urls[count]}}"></img></div>
+            <br>
+          </article>
+        </article>
+        </div>
+        {% set count=count+1%}
+        {% endfor %}
+
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
